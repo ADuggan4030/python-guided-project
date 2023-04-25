@@ -1,1 +1,2 @@
-# python-guided-project
+# Python Guided Project - Widget Wonders
+
