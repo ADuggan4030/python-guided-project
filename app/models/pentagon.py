@@ -1,9 +1,9 @@
-from base_polygon import BasePolygon
+from app.models import base_polygon
 from math import sqrt
 from math import pow
 
 
-class Pentagon(BasePolygon):
+class Pentagon(base_polygon.BasePolygon):
 
     def __init__(self, side_a, side_b, side_c, side_d, side_e):
         super().__init__(5)
@@ -20,7 +20,7 @@ class Pentagon(BasePolygon):
 
     @property
     def height(self) -> float:
-        return self.__side_a * sqrt(5 + 2 * sqrt(5) / 2)
+        return self.__side_a * sqrt(5 + 2 * sqrt(5)) / 2
 
     @property
     def perimeter(self) -> float:

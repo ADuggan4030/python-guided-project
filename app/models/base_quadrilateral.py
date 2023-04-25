@@ -1,8 +1,8 @@
-from base_polygon import BasePolygon
+from app.models import base_polygon
 from abc import ABC
 
 
-class BaseQuadrilateral(ABC, BasePolygon):
+class BaseQuadrilateral(base_polygon.BasePolygon, ABC):
 
     def __init__(self, side_a, side_b, side_c, side_d):
         super().__init__(4)

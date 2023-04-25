@@ -1,8 +1,8 @@
-from base_polygon import BasePolygon
+from app.models import base_polygon
 from abc import ABC
 
 
-class BaseTriangle(BasePolygon, ABC):
+class BaseTriangle(base_polygon.BasePolygon, ABC):
 
     def __init__(self, side_a, side_b, side_c):
         super().__init__(3)
@@ -24,7 +24,7 @@ class BaseTriangle(BasePolygon, ABC):
 
     @property
     def area(self) -> float:
-        return .5 * self.__side_a * self.height
+        return .5 * self.__side_b * self.height
 
     @property
     def perimeter(self) -> float:
